@@ -24,18 +24,18 @@ void update_balance(long double balance_change_amount, bool withdraw_or_deposit)
   
   long double current_balance = 0;
 
-  YAML::Node users = YAML::LoadFile("yml/user_accounts.yml");
-  cout << users << "\n";
+  YAML::Node source = YAML::LoadFile("yml/user_accounts.yml");
 
-  // The following is simply an outline because I do not know the syntax for specifying which part of our
-  // yaml file to use
-  
-// for (int item : users["users"] {
-//    if (users["account_id"] == user_id {
-//        current_balance = users["account_id"]["current_balance"];
-//    }
-//  }
-      
+  for (const auto& p : source["users"]) {
+    for (const auto& key_value : p) {
+      YAML::Node key = key_value.first;
+      YAML::Node value = key_value.second;
+      if (key.as<string>() == "account_id") {
+        cout << value << "\n"; 
+      }
+    }
+  } 
+     
 //  if (withdraw_or_deposit) {
 //    current_balance += balance_change_amount;
 //  }
