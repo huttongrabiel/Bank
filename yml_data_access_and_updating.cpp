@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
 #include <stdlib.h>
-#include "/home/hutton/yaml-cpp/yaml.h" 
+#include <yaml-cpp/yaml.h>
 
 /* This program is used in bank_operations.cpp. Its job is to update the yml database with the most 
 current information for a client of the bank. Every time a client makes and transaction, their 
