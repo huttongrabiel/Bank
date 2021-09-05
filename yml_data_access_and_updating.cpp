@@ -18,11 +18,12 @@ int main() {
 // Withdraw == true and deposit == false
 // For withdraw_or_deposit: true == withdraw, false == deposit
   
-void update_balance(long double balance_change_amount, bool withdraw_or_deposit) {
+void user_id_to_bank_account_connection(long double balance_change_amount, bool withdraw_or_deposit) {
 
   /* This function uses the user provided log in information to update their balance within the yaml data file. */
   
   long double current_balance = 0;
+  long int user_login_id = 0;
 
   YAML::Node source = YAML::LoadFile("yml/user_accounts.yml");
 
@@ -31,15 +32,14 @@ void update_balance(long double balance_change_amount, bool withdraw_or_deposit)
       YAML::Node key = key_value.first;
       YAML::Node value = key_value.second;
       if (key.as<string>() == "account_id") {
-        cout << value << "\n"; 
+        // We want the balance value associated with the p value here
+        if (value == user_login_id) {
+          update_balance(); 
+        } 
       }
     }
-  } 
-     
-//  if (withdraw_or_deposit) {
-//    current_balance += balance_change_amount;
-//  }
-//  else {
-//    current_balance -= balance_change_amount;
-//  }
+  }
+
+  // Add function to save user last login, transaction count, etc. in addition to the update_balance
+  // associated with a user 
 }
