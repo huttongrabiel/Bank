@@ -10,7 +10,7 @@ balance is updated as well as a transaction count. */
 using namespace std;
 
 void update_balance(long double value_change, long int user_id, long double current_balance);
-void user_id_to_bank_account_connection(long double balance_change_amount, bool withdraw_or_deposit, long int user_id);
+void user_id_to_bank_account_connection(long double balance_change_amount, long int user_id);
 
 int main() {
   update_balance(45, true);
@@ -19,7 +19,7 @@ int main() {
 // Withdraw == true and deposit == false
 // For withdraw_or_deposit: true == withdraw, false == deposit
   
-void user_id_to_bank_account_connection(long double balance_change_amount, bool withdraw_or_deposit, long int user_id) {
+void user_id_to_bank_account_connection(long double balance_change_amount, long int user_id) {
 
   /* This function uses the user provided log in information to update their balance within the yaml data file. */
   
