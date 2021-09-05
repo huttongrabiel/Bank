@@ -1,4 +1,5 @@
 
 
-void update_balance(long double value_change, long int user_id, long double current_balance);
-void user_id_to_bank_account_connection(long double balance_change_amount, long int user_id); 
+void user_balance_update(long double balance_change_amount, string username);
+YAML::Node connect_to_yml_data();
+long double user_transaction();

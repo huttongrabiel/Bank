@@ -9,8 +9,6 @@
 
 using namespace std;
 
-long double user_transaction();
-
 int main() {
   
 }
