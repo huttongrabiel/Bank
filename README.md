@@ -14,7 +14,7 @@ I work closely with yaml in my DevOps Internship and I am trying to get better
 using it. At the same time I want to write some in CPP so I used the yaml-cpp
 library to access and modiy the yml file that will hold all the user information.
 
-'''bash
+'''
 users:
   identifier:
     stuff : thing
