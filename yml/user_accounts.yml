@@ -1,11 +1,11 @@
 ---
 users: 
-  - account_id: 0 
-    name: "Hutton Grabiel"
-    balance: 10000
-    transaction_count: 0
+    account_id: 0 
+      name: "Hutton Grabiel"
+      balance: 10000
+      transaction_count: 0
 
-  - account_id: 1
-    name: "Ethan Rameson"
-    balance: 4
-    transaction_count: 0
+    account_id: 1
+      name: "Ethan Rameson"
+      balance: 4
+      transaction_count: 0
