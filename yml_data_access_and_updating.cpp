@@ -9,7 +9,7 @@ balance is updated as well as a transaction count. */
 
 using namespace std;
 
-void update_balance(long double value_change);
+void update_balance(long double value_change, long int user_id, long double current_balance);
 void user_id_to_bank_account_connection(long double balance_change_amount, bool withdraw_or_deposit, long int user_id);
 
 int main() {
@@ -34,7 +34,8 @@ void user_id_to_bank_account_connection(long double balance_change_amount, bool 
       if (key.as<string>() == "account_id") {
         // We want the balance value associated with the p value here
         if (value == user_id) {
-          update_balance(user_transaction()); // Update stored user balance based on the amount they change in user_transaction 
+          // current_balance = value associated with this user_id so we need to continue inner loop until = to "balance"  
+          update_balance(user_transaction(), user_id, current_balance); // Update stored user balance based on the amount they change in user_transaction 
         } 
       }
       else {
@@ -47,6 +48,6 @@ void user_id_to_bank_account_connection(long double balance_change_amount, bool 
   // associated with a user 
 }
 
-void update_balance(long double value_change, long int user_id) {
-   
+void update_balance(long double value_change, long int user_id, long double current_balance) {
+    
 }
