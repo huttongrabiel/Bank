@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#include <string.h>
+#include <cstring>
 #include <thread>
 #include <chrono>
 #include <algorithm>
@@ -8,10 +8,6 @@
 #include "yml/yamlIncludes.h"
 
 using namespace std;
-
-int main() {
-  
-}
 
 long double user_transaction() {
   

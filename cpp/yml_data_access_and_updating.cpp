@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <yaml-cpp/yaml.h>
 #include "../include/yamlIncludes.h"
+#include <cstring>
 
 /* This program is used in bank_operations.cpp. Its job is to update the yml database with the most 
 current information for a client of the bank. Every time a client makes and transaction, their 
@@ -17,15 +18,15 @@ void user_balance_update(long double balance_change_amount, string username) {
 
   /* This function uses the user provided log in information to update their balance within the yaml data file. */
   
-  YAML::Node source = YAML::LoadFile("yml/user_accounts.yml");
+  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
   
   source["users"][username]["balance"] += balance_change_amount;
-  ofstream fout("yml/user_accounts.yml");
+  ofstream fout("../yml/user_accounts.yml");
   fout << source;
   f.close(); 
 }
 
 YAML::Node connect_to_yml_data() {
-  YAML::Node source = YAML::LoadFile("yml/user_accounts.yml");
+  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
   return source; 
 }
