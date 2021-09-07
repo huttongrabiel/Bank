@@ -20,8 +20,12 @@ void user_balance_update(long double balance_change_amount, string username) {
   
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
   
-  source["users"][username]["balance"] += balance_change_amount;
-  ofstream fout("../yml/user_accounts.yml");
-  fout << source;
-  f.close();
+  long double balance = source["users"][username]["balance"].as<long double>();
+  balance += balance_change_amount;
+  source["users"][username]["balance"] = balance;
+
+  ofstream user_accounts_file;
+  user_accounts_file.open("../yml/user_accounts.yml");
+  user_accounts_file << source;
+  user_accounts_file.close();
 } 
