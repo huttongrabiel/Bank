@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include <yaml-cpp/yaml.h>
-#include "../include/yamlIncludes.h"
+#include "yamlIncludes.h"
 #include <cstring>
 
 /* This program is used in bank_operations.cpp. Its job is to update the yml database with the most 

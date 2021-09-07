@@ -5,7 +5,7 @@
 #include <chrono>
 #include <algorithm>
 #include <iomanip>
-#include "yml/yamlIncludes.h"
+#include "yamlIncludes.h"
 
 using namespace std;
 
@@ -26,9 +26,6 @@ long double user_transaction() {
   else {
     cout << "Enter amount to be withdrawn: ";
     cin >> value_change;
-    if (value_change > balance) {
-      cout << "Transaction is too large, not enough money in account" << "\n";
-    }
     value_change *= -1;
   }
   return value_change;

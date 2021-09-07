@@ -1,6 +1,6 @@
 #include <iostream>
 #include <yaml-cpp/yaml.h>
-#include "../include/yamlIncludes.h"
+#include "yamlIncludes.h"
 #include <cstring>
 
 using namespace std;
