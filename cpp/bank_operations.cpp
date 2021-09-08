@@ -12,7 +12,7 @@ using namespace std;
 long double user_transaction() {
   
   string transaction_decision = "";
-  while (transaction_decision != "deposit" || transaction_decision != "withdrawl") {
+  while (transaction_decision != "deposit" && transaction_decision != "withdrawl") {
     cout << "Deposit or Withdrawl?: ";
     cin >> transaction_decision;
   }
