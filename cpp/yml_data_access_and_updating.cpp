@@ -5,6 +5,7 @@
 #include "yamlIncludes.h"
 #include <cstring>
 #include <fstream>
+#include <iomanip>
 /* This program is used in bank_operations.cpp. Its job is to update the yml database with the most 
 current information for a client of the bank. Every time a client makes and transaction, their 
 balance is updated as well as a transaction count. */
@@ -26,6 +27,6 @@ void user_balance_update(long double balance_change_amount, string username) {
 
   ofstream user_accounts_file;
   user_accounts_file.open("../yml/user_accounts.yml");
-  user_accounts_file << source;
+  user_accounts_file << fixed << setprecision(2) << source;
   user_accounts_file.close();
 } 
