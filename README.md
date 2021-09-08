@@ -1,5 +1,6 @@
 # Bank
-We Buildin' A Government Monetary Transaction Unit
+Making a fake banking system with no clue of how banking systems or the general
+architecture for online bank services work
 
 # Background
 Was joking around in the car on a roadtrip a built a ~30 line 'banking system' that was
@@ -12,8 +13,10 @@ IDK... Clone it and make terrible financial decisions with no repercussions?
 Compilation is weird for now. I will make a GNUMakeFile some day in the near future to
 make setup easier but for now this works.
 
+Navigate to the cpp file in the cloned directory and run below command to compile
 ```bash
 g++ bank_operations.cpp main.cpp -L/usr/local/lib yml_data_access_and_updating.cpp -lyaml-cpp -o OperateBank
+./OperateBank
 ```
 
 # Why YAML?
@@ -34,6 +37,3 @@ users:
 * Create GNUMakefile so that we can compile with make and not the weird g++ compilation process
 * Build a check system for deposit or withdrawl question that only allows those two answers 
 and asks agains if not given that one or the other
-
-# WARNING
-It does not work at all right now, don't even bother cloning it.
