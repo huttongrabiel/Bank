@@ -28,10 +28,12 @@ users:
     stuff : thing
 ```
 # To Do
-* There is some sort of precision/addding error when updating the balance of the yaml file
-* We need to select whose account it is that is being updated so that it works for many users
+* Fix precision error on the long double value in the yml data base and cpp files
+* Only allow user to give username values that exist in our database
 * Create a login/sign up page which when completed adds an account to the database
 * Create GNUMakefile so that we can compile with make and not the weird g++ compilation process
+* Build a check system for deposit or withdrawl question that only allows those two answers 
+and asks agains if not given that one or the other
 
 # WARNING
 It does not work at all right now, don't even bother cloning it.
