@@ -36,11 +36,13 @@ users:
 ```
 # To Do
 * Fix precision error on the long double value in the yml data base and cpp files
-* Only allow user to give username values that exist in our database
 * Create a login/sign up page which when completed adds an account to the database
 * Create GNUMakefile so that we can compile with make and not the weird g++ compilation process
-* Build a check system for deposit or withdrawl question that only allows those two answers 
-and asks agains if not given that one or the other
+* Create signup() function to add new users to the yml database
+* Call signup() when user enters username that does not exist in our database but give
+them option to reenter in case they mistyped
+* Add password key:value pair to yaml database and begin checking for username/password
+combinations before updating user bank information
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
