@@ -31,15 +31,20 @@ void user_balance_update(long double balance_change_amount, string username) {
   user_accounts_file.close();
 }
 
-void user_in_database(string username) {
+bool user_in_database(string username) {
   // This function checks whether the given user value is in the database and prompts them to sign up if not
   
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
    
   // Iterate through each source["users"][username] and see if an account exists that matches the entered username
   
+  bool flag = false;
+
   for (const auto& p : source["users"]) {
     YAML::Node seq = p.first;
-    cout << seq.as<string>() << "\n";
+    if (username == seq.as<string>()) {
+      flag = true;
+    }
   }
+  return flag;
 }

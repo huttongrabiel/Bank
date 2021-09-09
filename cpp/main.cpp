@@ -10,6 +10,13 @@ int main() {
 
   cout << "Enter Username: ";
   cin >> username;
+  
+  if (!user_in_database(username)) {
+    cout << "Would you like to sign up? (Y/n)";
+  }
+  else {
+    cout << "Login Successful!" << "\n";
+  }
 
   cout << "\n" << "Enter Password: ";
   cin >> password;
