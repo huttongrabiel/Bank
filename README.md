@@ -43,6 +43,8 @@ users:
 them option to reenter in case they mistyped
 * Add password key:value pair to yaml database and begin checking for username/password
 combinations before updating user bank information
+* Finish writing sign up function and file
+* Implement sign up function
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
