@@ -43,6 +43,8 @@ users:
 them option to reenter in case they mistyped
 * Add password key:value pair to yaml database and begin checking for username/password
 combinations before updating user bank information
+* Finish Building user sign up function on signUps branch
+* ^^ above function I need to figure out how to make a sequence of mappings 
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
