@@ -2,8 +2,9 @@ users:
   whuty:
     account_id: 0
     name: Hutton Grabiel
-    balance: 45.5400000000000000008
+    balance: 85.5400000000000000008
     transaction_count: 0
+    password: HuttonThomas06
   eram3son:
     account_id: 1
     name: Ethan Rameson

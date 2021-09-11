@@ -10,16 +10,23 @@ int main() {
 
   cout << "Enter Username: ";
   cin >> username;
-  
-  if (!user_in_database(username)) {
-    cout << "Would you like to sign up? (Y/n)";
-  }
-  else {
-    cout << "Login Successful!" << "\n";
-  }
-
   cout << "\n" << "Enter Password: ";
   cin >> password;
+
+  if (user_in_database(username) && username_matches_password(username, password)) {
+    cout << "Login Successful!" << "\n";
+  }
+  else {
+    while (!(user_in_database(username) && username_matches_password(username, password))) {
+      cout << "Username or Password Incorrect, Try Again" << "\n";
+      cout << "Enter Username: ";
+      cin >> username;
+      cout << "Enter Password: ";
+      cin >> password;
+    }
+  }
+
+  cout << "Login Successful!" << "\n";
 
   long double num = user_transaction();
   user_balance_update(num, username);
