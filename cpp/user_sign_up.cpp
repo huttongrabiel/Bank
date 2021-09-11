@@ -9,8 +9,8 @@ int main() {
   // and add the user to the yml database
   std::string new_username = "raphael";
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
-  source["users"][new_username] = "bob";
-
+  source["users"][new_username] ;
+  
   std::ofstream user_accounts_file;
   user_accounts_file.open("../yml/user_accounts.yml");
   user_accounts_file << source;
