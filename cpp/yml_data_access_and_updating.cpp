@@ -48,3 +48,17 @@ bool user_in_database(string username) {
   }
   return flag;
 }
+
+bool user_matches_password(string username, string password) {
+
+  // This function confirms the username to the password
+  
+  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+  
+  if (source["users"][username]["password"] == password) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
