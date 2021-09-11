@@ -2,10 +2,10 @@ users:
   whuty:
     account_id: 0
     name: Hutton Grabiel
-    balance: 345.03999999999999998
+    balance: 45.5400000000000000008
     transaction_count: 0
   eram3son:
     account_id: 1
     name: Ethan Rameson
-    balance: 4
+    balance: 0
     transaction_count: 0
