@@ -35,7 +35,8 @@ users:
     stuff : thing
 ```
 # To Do
-* Fix precision error on the long double value in the yml data base and cpp files
+* Format output in a better way, more spacing to separate different sections
+* Create and implement transaction count function 
 * Create a login/sign up page which when completed adds an account to the database
 * Create GNUMakefile so that we can compile with make and not the weird g++ compilation process
 * Create signup() function to add new users to the yml database
