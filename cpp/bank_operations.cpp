@@ -5,6 +5,7 @@
 #include <iomanip>
 #include "yamlIncludes.h"
 #include <yaml-cpp/yaml.h>
+#include <algorithm>
 
 using namespace std;
 
@@ -32,20 +33,20 @@ long double user_transaction() {
   return value_change;
 }
 
-void transaction_receipt(string username, long double value_change, string transaction_decision) {
+void transaction_receipt(string username, long double value_change) {
 
   // This function creates a receipt of the users transaction
 
-  cout << "You're " << transaction_decision << "has been completed!" << "\n";
-  
-  if (transaction_decision == "withdrawl") {
-   cout << "You withdrew " << value_change << " from your account" << "\n";
+  if (value_change < 0) {
+    cout << "\n" << "Your withdrawl has been completed!" << "\n"; 
+    cout << "   Withdrew: " << value_change << "\n";
   }
   else {
-   cout << "You deposited " << value_change << " into your account" << "\n";
+    cout << "Your deposit has been completed!" << "\n";
+    cout << "   Deposited: " << value_change << "\n";
   }
 
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
 
-  cout << "Your updated balance is: " << source["users"][username]["balance"].as<long double>() << "\n";
+  cout << "   Balance: " << source["users"][username]["balance"].as<long double>() << "\n";
 }

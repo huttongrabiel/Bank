@@ -10,7 +10,7 @@ int main() {
 
   cout << "Enter Username: ";
   cin >> username;
-  cout << "\n" << "Enter Password: ";
+  cout << "Enter Password: ";
   cin >> password;
 
   if (user_in_database(username) && username_matches_password(username, password)) {
@@ -24,10 +24,11 @@ int main() {
       cout << "Enter Password: ";
       cin >> password;
     }
+    cout << "Login Successful!" << "\n";
   }
 
-  cout << "Login Successful!" << "\n";
-
-  long double num = user_transaction();
-  user_balance_update(num, username);
+  long double value_change = user_transaction();
+  user_balance_update(value_change, username);
+  
+  transaction_receipt(username, value_change);
 }
