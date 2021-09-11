@@ -10,3 +10,4 @@ users:
     name: Ethan Rameson
     balance: 0
     transaction_count: 0
+    password: SBCC
