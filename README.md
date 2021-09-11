@@ -41,8 +41,6 @@ users:
 * Create signup() function to add new users to the yml database
 * Call signup() when user enters username that does not exist in our database but give
 them option to reenter in case they mistyped
-* Add password key:value pair to yaml database and begin checking for username/password
-combinations before updating user bank information
 * Finish Building user sign up function on signUps branch
 * ^^ above function I need to figure out how to make a sequence of mappings 
 
