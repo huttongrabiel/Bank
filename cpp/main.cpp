@@ -10,13 +10,13 @@ int main() {
 
   cout << "Enter Username: ";
   cin >> username;
-<<<<<<< HEAD
+
   cout << "Enter Password: ";
   cin >> password;
 
   if (user_in_database(username) && username_matches_password(username, password)) {
     cout << "Login Successful!" << "\n";
-=======
+  }
   
   if (!user_in_database(username)) {
     cout << "Would you like to sign up? (Y/n): ";
@@ -28,7 +28,6 @@ int main() {
       cout << "Well maybe one day you'll join us, until then, goodbye!" << "\n"; 
       return 0;
     } 
->>>>>>> signUps
   }
   else {
     while (!(user_in_database(username) && username_matches_password(username, password))) {

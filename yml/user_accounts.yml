@@ -2,22 +2,13 @@ users:
   whuty:
     account_id: 0
     name: Hutton Grabiel
-<<<<<<< HEAD
-    balance: 175.540000000000000008
-=======
-    balance: 3000
->>>>>>> signUps
+    balance: 3045
     transaction_count: 0
     password: HuttonThomas06
   eram3son:
     account_id: 1
     name: Ethan Rameson
-<<<<<<< HEAD
-    balance: 0
-    transaction_count: 0
     password: SBCC
-
-=======
     balance: 4
     transaction_count: 0
   gu:
@@ -30,4 +21,8 @@ users:
     name: ~
     balance: 35
     password: gorg2
->>>>>>> signUps
+  yup:
+    account_id: 2
+    name: ~
+    balance: 34
+    password: u
