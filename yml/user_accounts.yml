@@ -14,3 +14,8 @@ users:
     name: ~
     balance: 25
     password: guby
+  gorg:
+    account_id: 2
+    name: ~
+    balance: 35
+    password: gorg2
