@@ -37,20 +37,9 @@ users:
 # To Do
 * Format output in a better way, more spacing to separate different sections
 * Create and implement transaction count function 
-* Create a login/sign up page which when completed adds an account to the database
 * Create GNUMakefile so that we can compile with make and not the weird g++ compilation process
-* Create signup() function to add new users to the yml database
-* Call signup() when user enters username that does not exist in our database but give
-them option to reenter in case they mistyped
-<<<<<<< HEAD
-* Finish Building user sign up function on signUps branch
-* ^^ above function I need to figure out how to make a sequence of mappings 
-=======
-* Add password key:value pair to yaml database and begin checking for username/password
-combinations before updating user bank information
-* Finish writing sign up function and file
-* Implement sign up function
->>>>>>> signUps
+* Fix basic operation of when user inputs username/password to make more sense if they dont exist in the yml database
+* Have user give real name when signing up
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
