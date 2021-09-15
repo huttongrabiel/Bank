@@ -12,5 +12,5 @@ users:
   gu:
     account_id: 2
     name: ~
-    balance: 45
+    balance: 25
     password: guby
