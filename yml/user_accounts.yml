@@ -9,3 +9,8 @@ users:
     name: Ethan Rameson
     balance: 4
     transaction_count: 0
+  gu:
+    account_id: 2
+    name: ~
+    balance: 45
+    password: guby
