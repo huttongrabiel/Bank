@@ -15,8 +15,9 @@ make setup easier but for now this works.
 
 Navigate to the cpp file in the cloned directory and run below command to compile
 ```bash
-g++ bank_operations.cpp main.cpp -L/usr/local/lib yml_data_access_and_updating.cpp -lyaml-cpp -o OperateBank
+g++ bank_operations.cpp main.cpp user_sign_up.cpp -L/usr/local/lib yml_data_access_and_updating.cpp -lyaml-cpp -o OperateBank
 ```
+This is mostly here so that I can come here and grab it when I forget
 
 Then Run
 ```bash
