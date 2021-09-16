@@ -12,27 +12,27 @@ void create_account() {
   
   // Collecting all necessary information
   std::string username, password, retyped_password, real_name;
-  std::cout << "Enter Username: ";
+  std::cout << "New Username: ";
   std::cin >> username;
  
   while (user_in_database(username)) {
     std::cout << "Username taken." << "\n";
-    std::cout << "Enter username: ";
+    std::cout << "New username: ";
     std::cin >> username; 
   }
 
-  std::cout << "Enter Password: ";
+  std::cout << "New Password: ";
   std::cin >> password;
-  std::cout << "Retype Password: ";
+  std::cout << "Retype New Password: ";
   std::cin >> retyped_password;
 
   while (password != retyped_password) {
     std::cout << "Passwords do not match, please try again." << "\n";
 
-    std::cout << "Enter Password: ";
+    std::cout << "New Password: ";
     std::cin >> password;
 
-    std::cout << "Retype Password: ";
+    std::cout << "Retype New Password: ";
     std::cin >> retyped_password;
   }
 

@@ -26,3 +26,13 @@ users:
     name: ~
     balance: 34
     password: u
+  turner:
+    account_id: 2
+    name: ~
+    balance: 34
+    password: k
+  gur:
+    account_id: 2
+    name: ~
+    balance: 45
+    password: gur20

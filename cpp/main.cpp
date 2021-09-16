@@ -10,16 +10,18 @@ int main() {
 
   cout << "Enter Username: ";
   cin >> username;
-
-  cout << "Enter Password: ";
-  cin >> password;
+  
+  if (user_in_database(username)) {
+    cout << "Enter Password: ";
+    cin >> password;
+  }
 
   if (user_in_database(username) && username_matches_password(username, password)) {
     cout << "Login Successful!" << "\n";
   }
   
   if (!user_in_database(username)) {
-    cout << "Would you like to sign up? (Y/n): ";
+    cout << "Usernmae does not exist. Would you like to sign up? (Y/n): ";
     cin >> user_wants_to_sign_up;
     if (user_wants_to_sign_up == "Y" || user_wants_to_sign_up == "y") {
       create_account();
