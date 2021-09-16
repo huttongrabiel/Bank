@@ -11,28 +11,3 @@ users:
     password: SBCC
     balance: 4
     transaction_count: 0
-  gu:
-    account_id: 2
-    name: ~
-    balance: 25
-    password: guby
-  gorg:
-    account_id: 2
-    name: ~
-    balance: 35
-    password: gorg2
-  yup:
-    account_id: 2
-    name: ~
-    balance: 34
-    password: u
-  turner:
-    account_id: 2
-    name: ~
-    balance: 34
-    password: k
-  gur:
-    account_id: 2
-    name: ~
-    balance: 45
-    password: gur20

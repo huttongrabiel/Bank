@@ -21,7 +21,7 @@ int main() {
   }
   
   if (!user_in_database(username)) {
-    cout << "Usernmae does not exist. Would you like to sign up? (Y/n): ";
+    cout << "Username does not exist. Would you like to sign up? (Y/n): ";
     cin >> user_wants_to_sign_up;
     if (user_wants_to_sign_up == "Y" || user_wants_to_sign_up == "y") {
       create_account();

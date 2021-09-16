@@ -36,6 +36,9 @@ void create_account() {
     std::cin >> retyped_password;
   }
 
+  std::cout << "Full Name (first, last): ";
+  std::cin >> real_name;
+
   std::ofstream user_accounts_file;
   user_accounts_file.open("../yml/user_accounts.yml", std::ios_base::app | std::ios_base::in);
    
