@@ -11,7 +11,7 @@ void create_account() {
   int next_account_id = 2;
   
   // Collecting all necessary information
-  std::string username, password, retyped_password, real_name;
+  std::string username, password, retyped_password, first_name, last_name;
   std::cout << "New Username: ";
   std::cin >> username;
  
@@ -36,15 +36,18 @@ void create_account() {
     std::cin >> retyped_password;
   }
 
-  std::cout << "Full Name (first, last): ";
-  std::cin >> real_name;
+  std::cout << "First Name: ";
+  std::cin >> first_name;
+  std::cout << "Last Name: ";
+  std:: cin >> last_name; 
 
   std::ofstream user_accounts_file;
   user_accounts_file.open("../yml/user_accounts.yml", std::ios_base::app | std::ios_base::in);
    
   user_accounts_file << "\n  " << username << ": ";
   user_accounts_file << "\n    account_id: " << next_account_id;
-  user_accounts_file << "\n    name: " << real_name;
+  user_accounts_file << "\n    first_name: " << first_name;
+  user_accounts_file << "\n    last_name: " << last_name;
   user_accounts_file << "\n    balance: 0";
   user_accounts_file << "\n    password: " << password;
   user_accounts_file.close();
