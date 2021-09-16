@@ -36,11 +36,11 @@ users:
     stuff : thing
 ```
 # To Do
-* Format output in a better way, more spacing to separate different sections
 * Create and implement transaction count function 
 * Create GNUMakefile so that we can compile with make and not the weird g++ compilation process
-* Fix basic operation of when user inputs username/password to make more sense if they dont exist in the yml database
-* Have user give real name when signing up
+* Figure out way to stop new users from inputting a username that exists but not knowing a password
+and then not being able to sign up. Maybe make the sign up if statement in main.cpp a function so that
+it can be called recursively whenever we run across a username/password combination that does not match
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
