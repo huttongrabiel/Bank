@@ -42,6 +42,7 @@ users:
 and then not being able to sign up. Maybe make the sign up if statement in main.cpp a function so that
 it can be called recursively whenever we run across a username/password combination that does not match
 * Fix bug where "Login Successful!" is printed to the screen twice when a user signs in
+* Test makefile with changes to cpp files
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
