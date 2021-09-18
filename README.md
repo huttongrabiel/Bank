@@ -10,8 +10,9 @@ trying to make my own fictional bank system.
 # Usage
 IDK... Clone it and make terrible financial decisions with no repercussions?
 
-Compilation is weird for now. I will make a GNUMakeFile some day in the near future to
-make setup easier but for now this works.
+September 18, 2021. On this fateful I quit being lazy about learning how to 
+build a makefile and finally did it. Behold, now you can be lazy and just run
+make and make clean to setup and cleanup this function. Merry christmas. 
 
 Navigate to the 'cpp' directory in the cloned directory and run make
 ```bash
