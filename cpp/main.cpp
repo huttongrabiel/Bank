@@ -30,7 +30,7 @@ int main() {
   // provide a password and then they can login, this is a terrible idea 
   // because their is no call back to the sign up step if they orginally provide
   // a username that exists but is not their user, will fix 
-  if (!user_in_database(username)) {
+  else if (!user_in_database(username)) {
     cout << "Username does not exist. Would you like to sign up? (Y/n): ";
     cin >> user_wants_to_sign_up;
     while (user_wants_to_sign_up != "n" && user_wants_to_sign_up != "N" && user_wants_to_sign_up != "Y" && user_wants_to_sign_up != "y") {
