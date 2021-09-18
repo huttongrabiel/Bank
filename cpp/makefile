@@ -11,3 +11,6 @@ Main.o: yamlIncludes.h
 User_Sign_Up.o: yamlIncludes.h
 
 Yml_Data_Access_And_Updating.o: yamlIncludes.h
+
+clean:
+	rm *.o OperateBank
