@@ -62,3 +62,17 @@ bool username_matches_password(string username, string password) {
     return false;
   }
 }
+
+void update_transaction_count(string username) {
+
+  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+
+  long unsigned int transaction_count = source["users"][username]["transaction_count"].as<long unsigned int>();
+  transaction_count++;
+  source["users"][username]["transaction_count"] = transaction_count;
+
+  ofstream user_accounts_file;
+  user_accounts_file.open("../yml/user_accounts.yml");
+  user_accounts_file << source;
+  user_accounts_file.close();
+}

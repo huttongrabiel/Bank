@@ -59,6 +59,6 @@ int main() {
 
   long double value_change = user_transaction();
   user_balance_update(value_change, username);
-  
+  update_transaction_count(username);
   transaction_receipt(username, value_change);
 }
