@@ -2,8 +2,8 @@ users:
   whuty:
     account_id: 0
     name: Hutton Grabiel
-    balance: 3045
-    transaction_count: 2
+    balance: 8445
+    transaction_count: 3
     password: HuttonThomas06
   eram3son:
     account_id: 1

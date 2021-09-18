@@ -13,15 +13,19 @@ IDK... Clone it and make terrible financial decisions with no repercussions?
 Compilation is weird for now. I will make a GNUMakeFile some day in the near future to
 make setup easier but for now this works.
 
-Navigate to the cpp file in the cloned directory and run below command to compile
+Navigate to the 'cpp' directory in the cloned directory and run make
 ```bash
-g++ bank_operations.cpp main.cpp user_sign_up.cpp -L/usr/local/lib yml_data_access_and_updating.cpp -lyaml-cpp -o OperateBank
+make
 ```
-This is mostly here so that I can come here and grab it when I forget
 
-Then Run
+Then Run to Start the Bank Simulation
 ```bash
 ./OperateBank
+```
+
+When Finished With the Program: In The 'cpp' directory Execute The Below Line
+```bash
+make clean
 ```
 
 # Why YAML?
@@ -36,13 +40,9 @@ users:
     stuff : thing
 ```
 # To Do
-* Create and implement transaction count function 
-* Create GNUMakefile so that we can compile with make and not the weird g++ compilation process
 * Figure out way to stop new users from inputting a username that exists but not knowing a password
 and then not being able to sign up. Maybe make the sign up if statement in main.cpp a function so that
 it can be called recursively whenever we run across a username/password combination that does not match
-* Fix bug where "Login Successful!" is printed to the screen twice when a user signs in
-* Test makefile with changes to cpp files
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
