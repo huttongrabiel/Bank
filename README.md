@@ -10,7 +10,7 @@ trying to make my own fictional bank system.
 # Usage
 IDK... Clone it and make terrible financial decisions with no repercussions?
 
-September 18, 2021. On this fateful I quit being lazy about learning how to 
+September 18, 2021. On this fateful day I quit being lazy about learning how to 
 build a makefile and finally did it. Behold, now you can be lazy and just run
 make and make clean to setup and cleanup this function. Merry christmas. 
 
