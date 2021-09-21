@@ -56,7 +56,8 @@ int main() {
     }
     cout << "Login Successful!" << "\n";
   }
-
+  
+  display_current_user_bank_information(username);
   long double value_change = user_transaction();
   user_balance_update(value_change, username);
   update_transaction_count(username);

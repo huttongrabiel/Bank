@@ -22,11 +22,11 @@ long double user_transaction() {
   transform(transaction_decision.begin(), transaction_decision.end(), transaction_decision.begin(), ::tolower);
   
   if (transaction_decision == "deposit") {
-    cout << "Enter amount to be deposited: ";
+    cout << "Enter amount to be deposited: $";
     cin >> value_change;
   }
   else {
-    cout << "Enter amount to be withdrawn: ";
+    cout << "Enter amount to be withdrawn: $";
     cin >> value_change;
     value_change *= -1;
   }
@@ -36,17 +36,31 @@ long double user_transaction() {
 void transaction_receipt(string username, long double value_change) {
 
   // This function creates a receipt of the users transaction
-
+  
   if (value_change < 0) {
-    cout << "\n" << "Your withdrawl has been completed!" << "\n"; 
-    cout << "   Withdrew: " << value_change << "\n";
+    cout << "\n" << "Your withdrawl has been completed!" << "\n";
+    cout << "----------------------------------" << "\n"; 
+    cout << "   Withdrew: $" << value_change << "\n";
   }
   else {
-    cout << "Your deposit has been completed!" << "\n";
-    cout << "   Deposited: " << value_change << "\n";
+    cout << "\n" << "Your deposit has been completed!" << "\n";
+    cout << "--------------------------------" << "\n";
+    cout << "   Deposited: $" << value_change << "\n";
   }
 
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
 
-  cout << "   Balance: " << source["users"][username]["balance"].as<long double>() << "\n";
+  cout << "   New Balance: $" << source["users"][username]["balance"].as<long double>() << "\n";
+  cout << "\n";
+}
+
+void display_current_user_bank_information(string username) {
+  
+  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+  
+  cout << "\n"; 
+  cout << "Your Current Bank Information" << "\n";
+  cout << "-----------------------------" << "\n";
+  cout << "  Current Balance: $" << source["users"][username]["balance"].as<long double>() << "\n";
+  cout << "\n";
 }
