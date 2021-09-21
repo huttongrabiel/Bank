@@ -8,5 +8,6 @@ bool username_matches_password(std::string, std::string);
 void transaction_receipt(std::string, long double);
 void create_account();
 void update_transaction_count(std::string);
+void display_current_user_bank_information(std::string);
 
 #endif
