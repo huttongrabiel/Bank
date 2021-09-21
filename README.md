@@ -44,6 +44,7 @@ users:
 * Figure out way to stop new users from inputting a username that exists but not knowing a password
 and then not being able to sign up. Maybe make the sign up if statement in main.cpp a function so that
 it can be called recursively whenever we run across a username/password combination that does not match
+* Give user current balance before they make transaction
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
