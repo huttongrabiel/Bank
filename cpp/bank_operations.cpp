@@ -7,14 +7,12 @@
 #include <yaml-cpp/yaml.h>
 #include <algorithm>
 
-using namespace std;
-
 long double user_transaction() {
   
-  string transaction_decision = "";
+  std::string transaction_decision = "";
   while (transaction_decision != "deposit" && transaction_decision != "withdrawl") {
-    cout << "Deposit or Withdrawl?: ";
-    cin >> transaction_decision;
+    std::cout << "Deposit or Withdrawl?: ";
+    std::cin >> transaction_decision;
   }
    
   long double value_change = 0; 
@@ -22,45 +20,45 @@ long double user_transaction() {
   transform(transaction_decision.begin(), transaction_decision.end(), transaction_decision.begin(), ::tolower);
   
   if (transaction_decision == "deposit") {
-    cout << "Enter amount to be deposited: $";
-    cin >> value_change;
+    std::cout << "Enter amount to be deposited: $";
+    std::cin >> value_change;
   }
   else {
-    cout << "Enter amount to be withdrawn: $";
-    cin >> value_change;
+    std::cout << "Enter amount to be withdrawn: $";
+    std::cin >> value_change;
     value_change *= -1;
   }
   return value_change;
 }
 
-void transaction_receipt(string username, long double value_change) {
+void transaction_receipt(std::string username, long double value_change) {
 
   // This function creates a receipt of the users transaction
   
   if (value_change < 0) {
-    cout << "\n" << "Your withdrawl has been completed!" << "\n";
-    cout << "----------------------------------" << "\n"; 
-    cout << "   Withdrew: $" << value_change << "\n";
+    std::cout << "\n" << "Your withdrawl has been completed!" << "\n";
+    std::cout << "----------------------------------" << "\n"; 
+    std::cout << "   Withdrew: $" << value_change << "\n";
   }
   else {
-    cout << "\n" << "Your deposit has been completed!" << "\n";
-    cout << "--------------------------------" << "\n";
-    cout << "   Deposited: $" << value_change << "\n";
+    std::cout << "\n" << "Your deposit has been completed!" << "\n";
+    std::cout << "--------------------------------" << "\n";
+    std::cout << "   Deposited: $" << value_change << "\n";
   }
 
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
 
-  cout << "   New Balance: $" << source["users"][username]["balance"].as<long double>() << "\n";
-  cout << "\n";
+  std::cout << "   New Balance: $" << source["users"][username]["balance"].as<long double>() << "\n";
+  std::cout << "\n";
 }
 
-void display_current_user_bank_information(string username) {
+void display_current_user_bank_information(std::string username) {
   
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
   
-  cout << "\n"; 
-  cout << "Your Current Bank Information" << "\n";
-  cout << "-----------------------------" << "\n";
-  cout << "  Current Balance: $" << source["users"][username]["balance"].as<long double>() << "\n";
-  cout << "\n";
+  std::cout << "\n"; 
+  std::cout << "Your Current Bank Information" << "\n";
+  std::cout << "-----------------------------" << "\n";
+  std::cout << "  Current Balance: $" << source["users"][username]["balance"].as<long double>() << "\n";
+  std::cout << "\n";
 }
