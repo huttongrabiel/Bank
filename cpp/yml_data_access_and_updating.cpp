@@ -10,12 +10,10 @@
 current information for a client of the bank. Every time a client makes and transaction, their 
 balance is updated as well as a transaction count. */
 
-using namespace std;
-
 // Withdraw == true and deposit == false
 // For withdraw_or_deposit: true == withdraw, false == deposit
   
-void user_balance_update(long double balance_change_amount, string username) {
+void user_balance_update(long double balance_change_amount, std::string username) {
 
   /* This function uses the user provided log in information to update their balance within the yaml data file. */
   
@@ -25,13 +23,13 @@ void user_balance_update(long double balance_change_amount, string username) {
   balance += balance_change_amount;
   source["users"][username]["balance"] = balance;
 
-  ofstream user_accounts_file;
+  std::ofstream user_accounts_file;
   user_accounts_file.open("../yml/user_accounts.yml");
-  user_accounts_file << fixed << setprecision(2) << source;
+  user_accounts_file << std::fixed << std::setprecision(2) << source;
   user_accounts_file.close();
 }
 
-bool user_in_database(string username) {
+bool user_in_database(std::string username) {
   // This function checks whether the given user value is in the database and prompts them to sign up if not
   
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
@@ -42,20 +40,20 @@ bool user_in_database(string username) {
 
   for (const auto& p : source["users"]) {
     YAML::Node seq = p.first;
-    if (username == seq.as<string>()) {
+    if (username == seq.as<std::string>()) {
       flag = true;
     }
   }
   return flag;
 }
 
-bool username_matches_password(string username, string password) {
+bool username_matches_password(std::string username, std::string password) {
 
   // This function confirms the username to the password
   
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
   
-  if (source["users"][username]["password"].as<string>() == password) {
+  if (source["users"][username]["password"].as<std::string>() == password) {
     return true;
   }
   else {
@@ -63,7 +61,7 @@ bool username_matches_password(string username, string password) {
   }
 }
 
-void update_transaction_count(string username) {
+void update_transaction_count(std::string username) {
 
   YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
 
@@ -71,7 +69,7 @@ void update_transaction_count(string username) {
   transaction_count++;
   source["users"][username]["transaction_count"] = transaction_count;
 
-  ofstream user_accounts_file;
+  std::ofstream user_accounts_file;
   user_accounts_file.open("../yml/user_accounts.yml");
   user_accounts_file << source;
   user_accounts_file.close();
