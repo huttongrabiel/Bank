@@ -45,5 +45,9 @@ users:
 and then not being able to sign up. Maybe make the sign up if statement in main.cpp a function so that
 it can be called recursively whenever we run across a username/password combination that does not match
 
+# Future Ideas for This Project
+* Build a GUI and in doing so, learn react.js
+* User to user transactions, requires encrypting information as is passes between the two 
+
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
