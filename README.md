@@ -1,3 +1,5 @@
+![:moneybag:](https://www.kindpng.com/picc/m/42-421449_cash-drawing-dirty-money-money-clipart-black-and.png)
+
 # Bank
 Making a fake banking system with no clue of how banking systems or the general
 architecture for online bank services work
