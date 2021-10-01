@@ -43,9 +43,11 @@ users:
     stuff : thing
 ```
 # To Do
-* Figure out way to stop new users from inputting a username that exists but not knowing a password
-and then not being able to sign up. Maybe make the sign up if statement in main.cpp a function so that
-it can be called recursively whenever we run across a username/password combination that does not match
+* Refactor code, especially main.cpp because it's messy
+* Really time to build a GUI for this, but that is so different
+it may require a whole new projects just with ideas/basic functions
+and design pulled from here. Still deciding. Think it would be really
+difficult to add a GUI to this project. 
 
 # Future Ideas for This Project
 * Build a GUI and in doing so, learn react.js
