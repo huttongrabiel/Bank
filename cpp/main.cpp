@@ -46,18 +46,38 @@ int main() {
   }
   else {
     while (!(user_in_database(username) && username_matches_password(username, password))) {
-      std::cout << "Username or Password Incorrect, Try Again" << "\n";
+      std::cout << "Password Incorrect, Try Again or Sign Up" << "\n";
+      std::cout << "Would you like to sign up? (y/n): ";
+      std::cin >> user_wants_to_sign_up;
+      while (user_wants_to_sign_up != "y" && user_wants_to_sign_up != "n") {
+        std::cout << "Would you like to sign up? (y/n): ";
+        std::cin >> user_wants_to_sign_up;
+      }
+      if (user_wants_to_sign_up == "y") {
+        create_account();
+      }
+      else {
+        std::cout << "Alright, well, if you change your mind we will still be here. Bye! :)" << "\n";
+        return 0;
+      }
+      std::cout << "\nLog In" << "\n";
+      std::cout << "------" << "\n";
       std::cout << "Enter Username: ";
       std::cin >> username;
       std::cout << "Enter Password: ";
       std::cin >> password;
     }
-    std::cout << "Login Successful!" << "\n";
   }
   
-  display_current_user_bank_information(username);
-  long double value_change = user_transaction();
-  user_balance_update(value_change, username);
-  update_transaction_count(username);
-  transaction_receipt(username, value_change);
+  if (user_in_database(username) && username_matches_password(username, password)) {
+    std::cout << "Login Succesful!" << "\n";
+    display_current_user_bank_information(username);
+    long double value_change = user_transaction();
+    user_balance_update(value_change, username);
+    update_transaction_count(username);
+    transaction_receipt(username, value_change);
+  }
+  else {
+    std::cout << "Sign up or get outta here goon!" << "\n";
+  }
 }
