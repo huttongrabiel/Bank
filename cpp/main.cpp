@@ -8,15 +8,18 @@ int main() {
 
   std::cout << "Enter Username: ";
   std::cin >> username;
-  
+
+  int create_account_count = 0; // to keep track if user signed up or not, so that we can
+  // decide whether to prompt them to log in or not
+
   if (user_in_database(username)) {
     std::cout << "Enter Password: ";
     std::cin >> password;
   }
 
-  if (user_in_database(username) && username_matches_password(username, password)) {
-    std::cout << "Login Successful!" << "\n";
-  }
+//  if (user_in_database(username) && username_matches_password(username, password)) {
+//    std::cout << "Login Successful!" << "\n";
+//  }
   
   // Shield your eyes because lines 24-49 are about to get weird. Here's the breakdown:
   // We read in a username and if it does not exist we prompt them to create an account,
@@ -38,6 +41,7 @@ int main() {
     } 
     if (user_wants_to_sign_up == "Y" || user_wants_to_sign_up == "y") {
       create_account();
+      create_account_count++;
     }
     else if (user_wants_to_sign_up == "n") {
       std::cout << "Well maybe one day you'll join us, until then, goodbye!" << "\n"; 
@@ -55,18 +59,21 @@ int main() {
       }
       if (user_wants_to_sign_up == "y") {
         create_account();
+        create_account_count++;
       }
       else {
         std::cout << "Alright, well, if you change your mind we will still be here. Bye! :)" << "\n";
         return 0;
       }
-      std::cout << "\nLog In" << "\n";
-      std::cout << "------" << "\n";
-      std::cout << "Enter Username: ";
-      std::cin >> username;
-      std::cout << "Enter Password: ";
-      std::cin >> password;
     }
+  }
+  if (create_account_count = 1) {
+    std::cout << "\nLog In" << "\n";
+    std::cout << "------" << "\n";
+    std::cout << "Enter Username: ";
+    std::cin >> username;
+    std::cout << "Enter Password: ";
+    std::cin >> password;
   }
   
   if (user_in_database(username) && username_matches_password(username, password)) {
