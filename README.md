@@ -49,6 +49,9 @@ it may require a whole new projects just with ideas/basic functions
 and design pulled from here. Still deciding. Think it would be really
 difficult to add a GUI to this project. 
 
+# Bugs
+* error with unsigned int in YAML::
+
 # Future Ideas for This Project
 * Build a GUI and in doing so, learn react.js
 * User to user transactions, requires encrypting information as is passes between the two 
