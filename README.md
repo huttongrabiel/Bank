@@ -47,7 +47,11 @@ users:
 * Really time to build a GUI for this, but that is so different
 it may require a whole new projects just with ideas/basic functions
 and design pulled from here. Still deciding. Think it would be really
-difficult to add a GUI to this project. 
+difficult to add a GUI to this project.
+* Build a loan function to simulate a loan
+  * Include Interest Rates (Maybe pull current avg loan interest rates off bank website, 
+  or just an select a random interest rate from an array of them)
+  * Need to have a pool of money that the bank holds, should be added into yaml database  
 
 # Bugs
 * error with unsigned int in YAML::
