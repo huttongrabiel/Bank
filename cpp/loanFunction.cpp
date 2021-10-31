@@ -35,5 +35,5 @@ int main() { // int main for now so that we can test this function
 
   long double reserveRequirement = 0.10 * bankBalance;
 
-  printf("%Lf\n%f\n%Lf\n", bankBalance, assignedInterestRate, reserveRequirement);  
+  
 }
