@@ -1,0 +1,10 @@
+How to Implement the Loan Function
+----------------------------------
+
+Step 1: Initialize all bank values to a starting point
+  * This will require setting the values using the yaml-cpp file
+  * Values will be created and then set into the yml database 
+    * values will then be updated whenever users take loans and/or make deposits
+
+Where is it that we want to create a menu to start the loan process?
+
