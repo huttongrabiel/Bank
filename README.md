@@ -62,3 +62,12 @@ difficult to add a GUI to this project.
 
 # Libraries
 * yaml-cpp: [https://github.com/jbeder/yaml-cpp]
+  * yaml-cpp is honestly a pain and I wish I never used it in the first place but now
+  I'm in too deep so read below on how to use it
+    * Clone the repo from the above link to /usr/local/lib/
+    * Navigate to /usr/local/lib and run
+    ```bash
+    mkdir build
+    cmake ../yaml-cpp
+    ```
+    * Restart your terminals and pray it works 
