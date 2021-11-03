@@ -3,6 +3,7 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
+#include <yaml-cpp/yaml.h>
 
 int main() { // int main for now so that we can test this function
 
@@ -35,5 +36,5 @@ int main() { // int main for now so that we can test this function
 
   long double reserveRequirement = 0.10 * bankBalance;
 
-  
+      
 }
