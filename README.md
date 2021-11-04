@@ -41,17 +41,6 @@ IF MAKE DOESNT WORK
 g++ bank_operations.cpp main.cpp user_sign_up.cpp -L/usr/local/lib yml_data_access_and_updating.cpp -lyaml-cpp -o OperateBank
 ```
 
-# Why YAML?
-I work closely with yaml in my DevOps Internship and I am trying to get better 
-using it. At the same time I want to write something in C++ so I used the yaml-cpp
-library to access and modiy the yml file that will hold all the user information.
-
-```bash
-users:
-  identifier:
-    stuff : thing
-    stuff : thing
-```
 # To Do
 * Refactor code, especially main.cpp because it's messy
 * Really time to build a GUI for this, but that is so different
