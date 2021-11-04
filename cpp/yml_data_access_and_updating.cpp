@@ -17,14 +17,14 @@ void user_balance_update(long double balance_change_amount, std::string username
 
   /* This function uses the user provided log in information to update their balance within the yaml data file. */
   
-  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+  YAML::Node source = YAML::LoadFile("../yml/dataBase.yml");
   
   long double balance = source["users"][username]["balance"].as<long double>();
   balance += balance_change_amount;
   source["users"][username]["balance"] = balance;
 
   std::ofstream user_accounts_file;
-  user_accounts_file.open("../yml/user_accounts.yml");
+  user_accounts_file.open("../yml/dataBase.yml");
   user_accounts_file << std::fixed << std::setprecision(2) << source;
   user_accounts_file.close();
 }
@@ -32,7 +32,7 @@ void user_balance_update(long double balance_change_amount, std::string username
 bool user_in_database(std::string username) {
   // This function checks whether the given user value is in the database and prompts them to sign up if not
   
-  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+  YAML::Node source = YAML::LoadFile("../yml/dataBase.yml");
    
   // Iterate through each source["users"][username] and see if an account exists that matches the entered username
   
@@ -51,7 +51,7 @@ bool username_matches_password(std::string username, std::string password) {
 
   // This function confirms the username to the password
   
-  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+  YAML::Node source = YAML::LoadFile("../yml/dataBase.yml");
   
   if (source["users"][username]["password"].as<std::string>() == password) {
     return true;
@@ -63,14 +63,14 @@ bool username_matches_password(std::string username, std::string password) {
 
 void update_transaction_count(std::string username) {
 
-  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+  YAML::Node source = YAML::LoadFile("../yml/dataBase.yml");
 
   long unsigned int transaction_count = source["users"][username]["transaction_count"].as<long unsigned int>();
   transaction_count++;
   source["users"][username]["transaction_count"] = transaction_count;
 
   std::ofstream user_accounts_file;
-  user_accounts_file.open("../yml/user_accounts.yml");
+  user_accounts_file.open("../yml/dataBase.yml");
   user_accounts_file << source;
   user_accounts_file.close();
 }

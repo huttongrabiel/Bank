@@ -42,7 +42,7 @@ void create_account() {
   std:: cin >> last_name; 
 
   std::ofstream user_accounts_file;
-  user_accounts_file.open("../yml/user_accounts.yml", std::ios_base::app | std::ios_base::in);
+  user_accounts_file.open("../yml/dataBase.yml", std::ios_base::app | std::ios_base::in);
    
   user_accounts_file << "\n  " << username << ": ";
   user_accounts_file << "\n    account_id: " << next_account_id;

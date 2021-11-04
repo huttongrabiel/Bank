@@ -46,7 +46,7 @@ void transaction_receipt(std::string username, long double value_change) {
     std::cout << "   Deposited: $" << value_change << "\n";
   }
 
-  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+  YAML::Node source = YAML::LoadFile("../yml/dataBase.yml");
 
   std::cout << "   New Balance: $" << source["users"][username]["balance"].as<long double>() << "\n";
   std::cout << "\n";
@@ -54,7 +54,7 @@ void transaction_receipt(std::string username, long double value_change) {
 
 void display_current_user_bank_information(std::string username) {
   
-  YAML::Node source = YAML::LoadFile("../yml/user_accounts.yml");
+  YAML::Node source = YAML::LoadFile("../yml/dataBase.yml");
   
   std::cout << "\n"; 
   std::cout << "Your Current Bank Information" << "\n";
