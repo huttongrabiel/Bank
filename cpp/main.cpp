@@ -67,7 +67,7 @@ int main() {
       }
     }
   }
-  if (create_account_count = 1) {
+  if (create_account_count == 1) {
     std::cout << "\nLog In" << "\n";
     std::cout << "------" << "\n";
     std::cout << "Enter Username: ";
