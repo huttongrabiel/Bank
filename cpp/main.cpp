@@ -12,15 +12,7 @@ int main() {
   int create_account_count = 0; // to keep track if user signed up or not, so that we can
   // decide whether to prompt them to log in or not
 
-  if (user_in_database(username)) {
-    std::cout << "Enter Password: ";
-    std::cin >> password;
-  }
 
-//  if (user_in_database(username) && username_matches_password(username, password)) {
-//    std::cout << "Login Successful!" << "\n";
-//  }
-  
   // Shield your eyes because lines 24-49 are about to get weird. Here's the breakdown:
   // We read in a username and if it does not exist we prompt them to create an account,
   // if they don't respond either Y, y, N, or n to the prompt, we require them to continue
@@ -31,6 +23,11 @@ int main() {
   // provide a password and then they can login, this is a terrible idea 
   // because their is no call back to the sign up step if they orginally provide
   // a username that exists but is not their user, will fix 
+
+  if (user_in_database(username)) {
+    std::cout << "Enter Password: ";
+    std::cin >> password;
+  }
   else if (!user_in_database(username)) {
     std::cout << "Username does not exist. Would you like to sign up? (Y/n): ";
     std::cin >> user_wants_to_sign_up;
@@ -67,6 +64,7 @@ int main() {
       }
     }
   }
+
   if (create_account_count == 1) {
     std::cout << "\nLog In" << "\n";
     std::cout << "------" << "\n";
